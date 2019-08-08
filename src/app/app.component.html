@@ -1,0 +1,40 @@
+<mat-toolbar>
+  Tic-Tac-Toe {{winLabel?.length > 0 ? (' | ' + winLabel | uppercase) : ''}}
+</mat-toolbar>
+
+<div class="box" [ngClass]="{'reset': boxes >= 9, 'win': winLabel === 'you win', 'lose': winLabel === 'pc win'}">
+  <div style="display: flex;flex-direction: row;width: fit-content">
+    <button mat-icon-button [disabled]="signs[0] !== 'blur_on'" (click)="userMove(0)">
+      <mat-icon>{{signs[0]}}</mat-icon>
+    </button>
+    <button mat-icon-button [disabled]="signs[1] !== 'blur_on'" (click)="userMove(1)">
+      <mat-icon>{{signs[1]}}</mat-icon>
+    </button>
+    <button mat-icon-button [disabled]="signs[2] !== 'blur_on'" (click)="userMove(2)">
+      <mat-icon>{{signs[2]}}</mat-icon>
+    </button>
+  </div>
+  <div style="display: flex;flex-direction: row;width: fit-content">
+    <button mat-icon-button [disabled]="signs[3] !== 'blur_on'" (click)="userMove(3)">
+      <mat-icon>{{signs[3]}}</mat-icon>
+    </button>
+    <button mat-icon-button [disabled]="signs[4] !== 'blur_on'" (click)="userMove(4)">
+      <mat-icon>{{signs[4]}}</mat-icon>
+    </button>
+    <button mat-icon-button [disabled]="signs[5] !== 'blur_on'" (click)="userMove(5)">
+      <mat-icon>{{signs[5]}}</mat-icon>
+    </button>
+  </div>
+  <div style="display: flex;flex-direction: row;width: fit-content">
+    <button mat-icon-button [disabled]="signs[6] !== 'blur_on'" (click)="userMove(6)">
+      <mat-icon>{{signs[6]}}</mat-icon>
+    </button>
+    <button mat-icon-button [disabled]="signs[7] !== 'blur_on'" (click)="userMove(7)">
+      <mat-icon>{{signs[7]}}</mat-icon>
+    </button>
+    <button mat-icon-button [disabled]="signs[8] !== 'blur_on'" (click)="userMove(8)">
+      <mat-icon>{{signs[8]}}</mat-icon>
+    </button>
+  </div>
+</div>
+
